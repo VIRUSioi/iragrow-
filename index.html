@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ira Grow | Spices, Herbs, Dehydrated Products & Agri Commodities</title>
+  <meta name="description" content="Bringing the Finest Indian Produce to Global Markets. Pure • Natural • Global. Sourcing premium spices, turmeric, cumin, air-dried vegetables, freeze-dried fruits, and agri commodities directly from trusted Indian farms." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://iragrow.com/wp-content/uploads/2026/01/cropped-cropped-IRAGROW_final-32x32.png" />
+
+  <!-- Google Fonts: Editorial Serif & Clean Agricultural Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            farm: {
+              DEFAULT: '#1b4d33',
+              dark: '#123321',
+              light: '#2b704c',
+              soft: '#eef7f1',
+              accent: '#40916c'
+            },
+            harvest: {
+              gold: '#c98a2c',
+              amber: '#d97706',
+              light: '#fef3c7',
+              warm: '#b45309'
+            },
+            cream: {
+              DEFAULT: '#fcfbf7',
+              dark: '#f5f1e8',
+              soft: '#faf8f2'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Agricultural Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#fcfbf7] text-[#19271e] font-sans antialiased">
+
+  <!-- =========================================================================
+       TOP ANNOUNCEMENT & CONTACT BAR
+       ========================================================================= -->
+  <div class="bg-[#123321] text-white text-xs py-2.5 px-4 sm:px-8 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-4 text-gray-200">
+        <span class="flex items-center gap-1.5 font-medium">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i>
+          Mandna, Sillod, Chhatrapati Sambhajinagar, Maharashtra, India – 431112
+        </span>
+      </div>
+      <div class="flex items-center gap-6 text-gray-200 font-medium">
+        <a href="tel:+917888189622" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i>
+          +91 78881 89622
+        </a>
+        <span class="text-white/30 hidden sm:inline">|</span>
+        <a href="mailto:exports@iragrow.com" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-amber-400"></i>
+          exports@iragrow.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm py-4 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo (Directly from iragrow.com & Brochure) -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-12 flex items-center">
+          <img src="assets/logo.png" alt="IraGrow Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';" />
+          <div id="logo-fallback" class="hidden items-center gap-2">
+            <i data-lucide="sprout" class="w-8 h-8 text-[#1b4d33]"></i>
+            <div>
+              <span class="font-serif text-2xl font-bold text-[#1b4d33] tracking-tight block leading-none">IraGrow</span>
+              <span class="font-mono text-[9px] text-[#c98a2c] tracking-widest uppercase block">PURE • NATURAL • GLOBAL</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-gray-700">
+        <a href="#about" class="hover:text-[#1b4d33] transition-colors">About Us</a>
+        <a href="#products" class="hover:text-[#1b4d33] transition-colors">Our Products</a>
+        <a href="#pillars" class="hover:text-[#1b4d33] transition-colors">Quality Sourcing</a>
+        <a href="#certifications" class="hover:text-[#1b4d33] transition-colors">Certifications</a>
+        <a href="#calculator-section" class="hover:text-[#1b4d33] transition-colors">Export Estimator</a>
+        <a href="#contact" class="hover:text-[#1b4d33] transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Action CTAs -->
+      <div class="flex items-center gap-3">
+        <button class="open-brochure-modal hidden sm:inline-flex btn-farm-outline text-xs py-2.5 px-4 font-bold">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Official Brochure</span>
+        </button>
+
+        <a href="#calculator-section" class="btn-farm text-xs py-2.5 px-5 font-bold uppercase tracking-wider">
+          <span>Get A Quote</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-lg border border-gray-300 flex items-center justify-center text-gray-700">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-[#123321]/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between p-8 text-white">
+    <div class="flex items-center justify-between pb-6 border-b border-white/15">
+      <div>
+        <span class="font-serif text-2xl font-bold tracking-tight text-white block">IraGrow</span>
+        <span class="font-mono text-[10px] text-amber-400 tracking-widest uppercase">PURE • NATURAL • GLOBAL</span>
+      </div>
+      <button id="mobile-close-btn" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-6 py-6 text-xl font-serif">
+      <a href="#about" class="mobile-nav-link hover:text-amber-400">About Us & Heritage</a>
+      <a href="#products" class="mobile-nav-link hover:text-amber-400">Our Agricultural Products</a>
+      <a href="#pillars" class="mobile-nav-link hover:text-amber-400">Quality Checks & Sourcing</a>
+      <a href="#certifications" class="mobile-nav-link hover:text-amber-400">Official Certifications</a>
+      <a href="#calculator-section" class="mobile-nav-link hover:text-amber-400">Interactive RFQ Estimator</a>
+      <a href="#contact" class="mobile-nav-link hover:text-amber-400">Contact Details</a>
+    </nav>
+
+    <div class="pt-6 border-t border-white/15 flex flex-col gap-3">
+      <button class="open-brochure-modal btn-harvest w-full py-3 text-center justify-center text-xs uppercase font-bold">
+        <i data-lucide="book-open" class="w-4 h-4"></i> View Product Brochure
+      </button>
+      <a href="#calculator-section" class="btn-farm w-full py-3 text-center justify-center text-xs uppercase font-bold">
+        Request Free Export Quote
+      </a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       HERO SECTION: AUTHENTIC AGRICULTURAL LANDSCAPE & FRESH HARVEST
+       ========================================================================= -->
+  <section class="relative bg-gradient-to-b from-[#f5f1e8] via-[#fcfbf7] to-white pt-12 pb-20 overflow-hidden border-b border-gray-200">
+    <!-- Gentle Organic Leaf Canvas -->
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-70"></canvas>
+
+    <div class="section-wrapper relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text (Left 7 Cols) -->
+        <div class="lg:col-span-7 reveal-up">
+          
+          <div class="agri-pill mb-4">
+            <i data-lucide="leaf" class="w-3.5 h-3.5 text-[#1b4d33]"></i>
+            <span>PURE • NATURAL • GLOBAL</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#123321] leading-[1.15] mb-6">
+            Bringing the Finest Indian Produce to <span class="text-[#c98a2c] italic">Global Markets</span>
+          </h1>
+
+          <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold text-[#1b4d33] mb-6 font-mono">
+            <span>Quality Spices</span>
+            <span class="text-gray-300">•</span>
+            <span>Healthy Foods</span>
+            <span class="text-gray-300">•</span>
+            <span>Sustainable Agriculture</span>
+          </div>
+
+          <h2 class="text-lg sm:text-xl font-bold text-gray-900 mb-4">
+            Your Trusted Partner in <span class="text-[#1b4d33] underline decoration-[#c98a2c] decoration-2">Spices, Herbs, Dehydrated Products and Agri Commodities</span>
+          </h2>
+
+          <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+            At IraGrow, we source and supply premium-quality agricultural products, connecting global buyers with the rich flavors and natural goodness of India. Sourced with intention — partnering directly with farmers, investing in better crop practices, and delivering products that represent India's agricultural excellence.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#products" class="btn-farm text-sm font-bold py-3.5 px-7">
+              <span>Explore Products</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+
+            <button class="open-brochure-modal btn-harvest text-sm font-bold py-3.5 px-6">
+              <i data-lucide="book-open" class="w-4 h-4"></i>
+              <span>View Product Brochure</span>
+            </button>
+
+            <a href="#calculator-section" class="btn-farm-outline text-sm font-bold py-3.5 px-6">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Export Calculator</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Showcase (Right 5 Cols) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Real Agricultural Harvest Banner Card -->
+            <div class="agri-card p-4 rounded-3xl bg-white shadow-xl border-2 border-[#1b4d33]/15 overflow-hidden">
+              <div class="relative h-[380px] sm:h-[440px] rounded-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Indian spices in wooden bowls" 
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#123321]/90 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                  <span class="agri-pill text-[10px] py-1 px-3 bg-[#c98a2c] text-white border-none mb-2 inline-block">
+                    Direct Farm Sourcing
+                  </span>
+                  <h3 class="font-serif text-2xl font-bold text-white mb-1">From Fields to Frontiers.</h3>
+                  <p class="text-xs text-gray-200">Mandna, Sillod, Chhatrapati Sambhajinagar, Maharashtra</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge: 30+ Years Expertise -->
+            <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-2xl shadow-lg border border-gray-200 flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-[#eef7f1] flex items-center justify-center text-[#1b4d33]">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="font-serif text-2xl font-bold text-[#1b4d33] leading-none block">30+ Years</span>
+                <span class="text-xs text-gray-600 font-medium">Agricultural Expertise</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5 CORE PILLARS BADGES BAR (Directly from Brochure Footer) -->
+    <div class="mt-12 bg-[#123321] text-white py-6 border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 text-center">
+          
+          <div class="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+            <i data-lucide="award" class="w-6 h-6 text-amber-400 mb-2"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white">Premium Quality</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+            <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400 mb-2"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white">Food Safety Compliant</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+            <i data-lucide="truck" class="w-6 h-6 text-amber-400 mb-2"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white">Reliable Supply Chain</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+            <i data-lucide="globe" class="w-6 h-6 text-emerald-400 mb-2"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white">Global Export Experience</span>
+          </div>
+
+          <div class="col-span-2 md:col-span-1 flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
+            <i data-lucide="sprout" class="w-6 h-6 text-amber-400 mb-2"></i>
+            <span class="text-xs sm:text-sm font-semibold text-white">Sustainable & Ethical Sourcing</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT SECTION: 30 YEARS HERITAGE, MISSION, VISION, VALUES
+       ========================================================================= -->
+  <section id="about" class="section-wrapper">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Narrative (Left 6 Cols) -->
+      <div class="lg:col-span-6 reveal-up">
+        <div class="agri-pill mb-3">
+          <i data-lucide="history" class="w-3.5 h-3.5"></i>
+          <span>About IraGrow</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-serif text-[#123321] mb-6">
+          We Provide The Best Service From <span class="text-[#c98a2c]">30 Years</span>
+        </h2>
+
+        <p class="text-gray-700 text-base leading-relaxed mb-4">
+          With over <strong>30 years of specialized expertise in maize cultivation and exports</strong>, we have built our foundation on trust, quality, and sustainable farming practices. What began as a focused effort in corn and grain production has now flourished into a diversified agri-business — expanding our reach into premium-quality spices, herbs, and dehydrated products.
+        </p>
+
+        <p class="text-gray-600 text-sm leading-relaxed mb-8 italic bg-[#f5f1e8] p-4 rounded-xl border-l-4 border-[#1b4d33]">
+          "Our philosophy remains simple — to grow naturally, process responsibly, and deliver globally."
+        </p>
+
+        <!-- Mission, Vision, Values Grid -->
+        <div class="space-y-4">
+          <div class="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#eef7f1] text-[#1b4d33] flex items-center justify-center shrink-0">
+              <i data-lucide="target" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm uppercase font-mono tracking-wider mb-1">Our Mission</h4>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                To become the leading global exporter of high-quality food products by delivering consistent value, maintaining transparent sourcing, and upholding uncompromised standards of purity, safety, and customer trust.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm uppercase font-mono tracking-wider mb-1">Our Vision</h4>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                To build a successful and innovative enterprise in the food processing sector, offering a diverse portfolio of premium and organic products that contribute to a healthier global food ecosystem.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#eef7f1] text-[#1b4d33] flex items-center justify-center shrink-0">
+              <i data-lucide="compass" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm uppercase font-mono tracking-wider mb-1">Our Values</h4>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                With deep roots in agriculture and a modern export approach, we deliver excellence in every grain — supplying markets across the <strong>Middle East, Asia, Africa and Europe</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Image & Farm Showcase (Right 6 Cols) -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative mx-auto">
+          
+          <div class="agri-card p-3 bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80" 
+              alt="Lush agricultural farmland in India" 
+              class="w-full h-80 sm:h-96 object-cover rounded-2xl" 
+            />
+            <div class="p-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-mono text-[#c98a2c] font-bold uppercase tracking-wider block">Farmer-First Network</span>
+                  <h4 class="font-serif text-xl font-bold text-[#123321]">Direct Agricultural Sourcing</h4>
+                </div>
+                <span class="agri-pill text-xs font-bold bg-[#eef7f1] text-[#1b4d33]">Sustainable</span>
+              </div>
+              <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                We cultivate and source premium-quality agri-commodities and authentic Indian spices directly from farms and a trusted network of farmers, ensuring consistent, export-grade quality.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Stat Card -->
+          <div class="mt-4 p-4 rounded-2xl bg-[#123321] text-white flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <i data-lucide="check-circle" class="w-6 h-6 text-amber-400"></i>
+              <div>
+                <span class="text-sm font-bold block">100% Transparent Sourcing</span>
+                <span class="text-xs text-gray-300">Farmer-to-Port traceability with no middle agents</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-harvest text-xs py-2 px-4 whitespace-nowrap font-bold">Inquire Now</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OUR COMPLETE PRODUCT RANGE (ALL 5 ATTACHED PRODUCTS + MAIZE)
+       ========================================================================= -->
+  <section id="products" class="bg-[#f5f1e8] py-20 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal-up">
+        <div class="agri-pill mb-3">
+          <i data-lucide="package" class="w-3.5 h-3.5"></i>
+          <span>Our Products</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-serif text-[#123321] mb-4">
+          Export-Grade Agricultural Produce
+        </h2>
+        <p class="text-gray-700 text-base leading-relaxed">
+          We cultivate and source premium-quality agri-commodities and authentic Indian spices directly from farms and a trusted network of farmers, ensuring consistent, export-grade quality for customers across the globe.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <button class="category-tab-btn active" data-filter="all">All Products</button>
+          <button class="category-tab-btn" data-filter="spices">Spices & Herbs</button>
+          <button class="category-tab-btn" data-filter="air-dried">Air-Dried Vegetables</button>
+          <button class="category-tab-btn" data-filter="commodities">Agri Commodities & Maize</button>
+          <button class="category-tab-btn" data-filter="freeze-dried">Freeze-Dried Fruits</button>
+        </div>
+      </div>
+
+      <!-- 5 Product Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-grid">
+
+        <!-- PRODUCT 1: TURMERIC FINGERS AND POWDER -->
+        <div class="product-grid-card agri-card overflow-hidden flex flex-col justify-between" data-category="spices">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=800&q=80" 
+                alt="Turmeric fingers and turmeric powder" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+              <span class="absolute top-3 left-3 bg-[#c98a2c] text-white text-[11px] font-bold font-mono py-1 px-2.5 rounded-full shadow">
+                Curcumin 3% – 5%
+              </span>
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[#1b4d33] text-[10px] font-bold font-mono py-1 px-2 rounded shadow">
+                IPM / Conventional
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="sprout" class="w-4 h-4 text-[#1b4d33]"></i>
+                <span class="text-xs font-mono font-bold text-[#c98a2c] uppercase">Direct Farm Sourcing</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#123321] mb-2">
+                Turmeric Fingers and Powder
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                Our premium turmeric features a natural curcumin content of 3–5%, known for its rich yellow color, strong aroma, and consistent quality. Available in polished and unpolished forms.
+              </p>
+              
+              <!-- Key bullets from brochure & website -->
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium border-t border-gray-100 pt-3 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>High curcumin content (3% – 5%)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Rich yellow colour & strong aroma</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Clean, export-grade quality</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Available in whole, split & powder form</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button class="open-product-modal w-full btn-farm text-xs font-bold py-3 justify-center" data-product="turmeric">
+              <span>View Specifications</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2: CUMIN SEEDS AND OTHER SPICES & HERBS -->
+        <div class="product-grid-card agri-card overflow-hidden flex flex-col justify-between" data-category="spices">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" 
+                alt="Cumin seeds and Indian whole spices" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+              <span class="absolute top-3 left-3 bg-[#1b4d33] text-white text-[11px] font-bold font-mono py-1 px-2.5 rounded-full shadow">
+                High Essential Oil
+              </span>
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-gray-800 text-[10px] font-bold font-mono py-1 px-2 rounded shadow">
+                Singapore & European
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="sprout" class="w-4 h-4 text-[#1b4d33]"></i>
+                <span class="text-xs font-mono font-bold text-[#c98a2c] uppercase">Whole & Ground</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#123321] mb-2">
+                Cumin Seeds & Other Spices & Herbs
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                Appreciated for strong aroma, rich flavor, and high essential oil content. Sourced and processed to international standards.
+              </p>
+
+              <!-- Key bullets from brochure & website -->
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium border-t border-gray-100 pt-3 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Cumin, Coriander, Fenugreek, Black Pepper, Chilli, Cardamom, etc.</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Singapore Quality (approx. 3–4 mm, mild & balanced)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>European Quality (approx. 4–5 mm, bold grains)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Whole, ground & cleaned options</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button class="open-product-modal w-full btn-farm text-xs font-bold py-3 justify-center" data-product="cumin">
+              <span>View Specifications</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 3: AIR-DRIED VEGETABLES -->
+        <div class="product-grid-card agri-card overflow-hidden flex flex-col justify-between" data-category="air-dried">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" 
+                alt="Dehydrated vegetables and powders" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+              <span class="absolute top-3 left-3 bg-red-700 text-white text-[11px] font-bold font-mono py-1 px-2.5 rounded-full shadow">
+                100% Pure Dehydrated
+              </span>
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-gray-800 text-[10px] font-bold font-mono py-1 px-2 rounded shadow">
+                Flakes & Powder
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="sprout" class="w-4 h-4 text-[#1b4d33]"></i>
+                <span class="text-xs font-mono font-bold text-[#c98a2c] uppercase">Processed Seasonings</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#123321] mb-2">
+                Air-Dried Vegetables
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                Premium quality vegetables dried under hygienic, controlled atmospheric conditions to preserve essential nutrients and culinary aroma.
+              </p>
+
+              <!-- Key bullets from brochure -->
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium border-t border-gray-100 pt-3 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Beetroot powder</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Garlic granules & minced garlic</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Onion powder & Onion flakes</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>And more customizable dehydrated items...</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button class="open-product-modal w-full btn-farm text-xs font-bold py-3 justify-center" data-product="air_dried">
+              <span>View Specifications</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 4: AGRI COMMODITIES & YELLOW MAIZE -->
+        <div class="product-grid-card agri-card overflow-hidden flex flex-col justify-between" data-category="commodities">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=800&q=80" 
+                alt="Yellow Maize and Agri Grains" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+              <span class="absolute top-3 left-3 bg-[#c98a2c] text-white text-[11px] font-bold font-mono py-1 px-2.5 rounded-full shadow">
+                30+ Years Experience
+              </span>
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-gray-800 text-[10px] font-bold font-mono py-1 px-2 rounded shadow">
+                Food & Feed Grade
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="sprout" class="w-4 h-4 text-[#1b4d33]"></i>
+                <span class="text-xs font-mono font-bold text-[#c98a2c] uppercase">Bulk & PP Bags</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#123321] mb-2">
+                Agri Commodities & Yellow Maize
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                Our high-quality maize is sourced from reliable farms with uniform kernels, low moisture content, and good grain density for food, feed, and industrial applications.
+              </p>
+
+              <!-- Key specs from website & brochure -->
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium border-t border-gray-100 pt-3 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Moisture: Max 13–14% | Foreign Matter: Max 1–2%</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Broken Kernels: Max 2–3%</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Grains, pulses, oilseeds and more</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Packing: 25 kg / 50 kg PP bags or bulk</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button class="open-product-modal w-full btn-farm text-xs font-bold py-3 justify-center" data-product="agri_commodities">
+              <span>View Specifications</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 5: FREEZE-DRIED FRUITS -->
+        <div class="product-grid-card agri-card overflow-hidden flex flex-col justify-between" data-category="freeze-dried">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80" 
+                alt="Freeze dried fruits and strawberries" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+              <span class="absolute top-3 left-3 bg-[#1b4d33] text-white text-[11px] font-bold font-mono py-1 px-2.5 rounded-full shadow">
+                100% Natural
+              </span>
+              <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-gray-800 text-[10px] font-bold font-mono py-1 px-2 rounded shadow">
+                Nutrient Intact
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <i data-lucide="sprout" class="w-4 h-4 text-[#1b4d33]"></i>
+                <span class="text-xs font-mono font-bold text-[#c98a2c] uppercase">Healthy Foods</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#123321] mb-2">
+                Freeze-Dried Fruits
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                Advanced freeze-drying removes moisture while completely locking in natural flavor, vibrant color, and active fruit nutrients.
+              </p>
+
+              <!-- Key bullets from brochure -->
+              <ul class="space-y-1.5 text-xs text-gray-700 font-medium border-t border-gray-100 pt-3 mb-4">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>100% natural, zero additives</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Retains authentic flavour, colour & nutrients</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Long shelf life with premium moisture barriers</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-[#1b4d33] shrink-0"></i>
+                  <span>Ideal for food, beverage and nutraceutical uses</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button class="open-product-modal w-full btn-farm text-xs font-bold py-3 justify-center" data-product="freeze_dried">
+              <span>View Specifications</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       QUALITY PROTOCOL & SOURCING PILLARS
+       ========================================================================= -->
+  <section id="pillars" class="section-wrapper">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+      <div class="agri-pill mb-3">
+        <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+        <span>Our Commitment</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-serif text-[#123321] mb-4">
+        Our Three Sourcing Pillars
+      </h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Our spices go through high-level checks for aroma and flavour profile, guaranteeing that only batches that meet our stringent export parameters move forward to packaging.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="agri-card p-8 text-center rounded-2xl border-t-4 border-[#1b4d33]">
+        <div class="w-16 h-16 rounded-2xl bg-[#eef7f1] text-[#1b4d33] flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="users" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-[#123321] mb-3">Farmer First Sourcing</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          We partner directly with farmers and a trusted network of cultivators in Maharashtra, investing in better crop practices, ethical procurement, and fair grower returns.
+        </p>
+      </div>
+
+      <div class="agri-card p-8 text-center rounded-2xl border-t-4 border-[#c98a2c]">
+        <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="clipboard-check" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-[#123321] mb-3">Strict Multi-Stage Checks</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Comprehensive testing for natural curcumin levels, volatile essential oil profiles, moisture control, and physical cleaning to eliminate all foreign material.
+        </p>
+      </div>
+
+      <div class="agri-card p-8 text-center rounded-2xl border-t-4 border-[#1b4d33]">
+        <div class="w-16 h-16 rounded-2xl bg-[#eef7f1] text-[#1b4d33] flex items-center justify-center mx-auto mb-6">
+          <i data-lucide="globe" class="w-8 h-8"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-[#123321] mb-3">Global Export Standards</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Delivering consistent, export-grade quality for customers across the globe — supplying destination markets throughout the Middle East, Europe, Asia, and Africa.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OFFICIAL CERTIFICATIONS & ACCREDITATIONS WITH REAL LOGOS
+       ========================================================================= -->
+  <section id="certifications" class="bg-[#f5f1e8] py-20 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+        <div class="agri-pill mb-3">
+          <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+          <span>Official Accreditations</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-serif text-[#123321] mb-4">
+          Government & Statutory Certifications
+        </h2>
+        <p class="text-gray-600 text-base leading-relaxed">
+          IraGrow operates with full regulatory compliance and statutory approvals from the Government of India and statutory export bodies. (Click on any certificate to inspect details).
+        </p>
+      </div>
+
+      <!-- 5 Real Certification Cards with exact images from iragrow.com/gallery/ -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+        <!-- 1. SPICES BOARD OF INDIA -->
+        <div class="cert-card" data-cert-img="assets/certificates/spices-board.png" data-cert-title="Spices Board of India" data-cert-desc="Statutory body under the Ministry of Commerce & Industry, Government of India, regulating and certifying quality standards of exported Indian spices and turmeric.">
+          <div class="h-24 flex items-center justify-center mb-4">
+            <img src="assets/certificates/spices-board.png" alt="Spices Board of India Logo" class="max-h-20 w-auto" />
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 mb-1">Spices Board</h4>
+          <span class="text-[11px] text-gray-500 font-mono">Government of India</span>
+          <span class="mt-3 text-[11px] font-bold text-[#1b4d33] flex items-center gap-1">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> View Details
+          </span>
+        </div>
+
+        <!-- 2. APEDA -->
+        <div class="cert-card" data-cert-img="assets/certificates/apeda-logo.webp" data-cert-title="APEDA Registered Exporter" data-cert-desc="Agricultural and Processed Food Products Export Development Authority (Ministry of Commerce and Industry) export registration for scheduled agri-commodities.">
+          <div class="h-24 flex items-center justify-center mb-4">
+            <img src="assets/certificates/apeda-logo.webp" alt="APEDA Logo" class="max-h-20 w-auto" />
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 mb-1">APEDA</h4>
+          <span class="text-[11px] text-gray-500 font-mono">Agri-Export Authority</span>
+          <span class="mt-3 text-[11px] font-bold text-[#1b4d33] flex items-center gap-1">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> View Details
+          </span>
+        </div>
+
+        <!-- 3. FSSAI -->
+        <div class="cert-card" data-cert-img="assets/certificates/fssai-or-apeda.png" data-cert-title="FSSAI Food Safety Licence" data-cert-desc="Food Safety and Standards Authority of India certified handling, storage, and processing adhering to hygienic global food manufacturing standards.">
+          <div class="h-24 flex items-center justify-center mb-4">
+            <img src="assets/certificates/fssai-or-apeda.png" alt="FSSAI Food Safety Logo" class="max-h-16 w-auto" />
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 mb-1">FSSAI Certified</h4>
+          <span class="text-[11px] text-gray-500 font-mono">Food Safety Standard</span>
+          <span class="mt-3 text-[11px] font-bold text-[#1b4d33] flex items-center gap-1">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> View Details
+          </span>
+        </div>
+
+        <!-- 4. IEC CODE -->
+        <div class="cert-card" data-cert-img="assets/certificates/iec-certificate.png" data-cert-title="Import-Export Code (IEC)" data-cert-desc="Directorate General of Foreign Trade (DGFT), Ministry of Commerce & Industry official Importer-Exporter Code certification.">
+          <div class="h-24 flex items-center justify-center mb-4">
+            <img src="assets/certificates/iec-certificate.png" alt="IEC Certificate Logo" class="max-h-20 w-auto" />
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 mb-1">IEC Code</h4>
+          <span class="text-[11px] text-gray-500 font-mono">Ministry of Commerce</span>
+          <span class="mt-3 text-[11px] font-bold text-[#1b4d33] flex items-center gap-1">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> View Details
+          </span>
+        </div>
+
+        <!-- 5. MSME LICENCE -->
+        <div class="cert-card col-span-2 md:col-span-1" data-cert-img="assets/certificates/msme-licence.jpg" data-cert-title="MSME / Udyam Registration" data-cert-desc="Ministry of Micro, Small & Medium Enterprises, Government of India officially registered agricultural enterprise.">
+          <div class="h-24 flex items-center justify-center mb-4">
+            <img src="assets/certificates/msme-licence.jpg" alt="MSME Registration Logo" class="max-h-20 w-auto" />
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 mb-1">MSME Licence</h4>
+          <span class="text-[11px] text-gray-500 font-mono">Government of India</span>
+          <span class="mt-3 text-[11px] font-bold text-[#1b4d33] flex items-center gap-1">
+            <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> View Details
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE EXPORT RFQ & CONTAINER LOAD CALCULATOR
+       ========================================================================= -->
+  <section id="calculator-section" class="section-wrapper">
+    <div class="text-center max-w-3xl mx-auto mb-12 reveal-up">
+      <div class="agri-pill mb-3">
+        <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+        <span>Interactive Procurement Tool</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-serif text-[#123321] mb-4">
+        Export Quotation & Container Estimator
+      </h2>
+      <p class="text-gray-600 text-base leading-relaxed">
+        Select your desired produce, volume, and packaging specification to calculate container capacity (FCL) and generate an instant quote request for our export team.
+      </p>
+    </div>
+
+    <div class="agri-card p-6 sm:p-10 border-2 border-[#1b4d33]/20 bg-white">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Interactive Controls (Left 7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Product Selection -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-gray-700 uppercase mb-2">1. Select Agricultural Produce</label>
+            <select id="calc-product" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm font-semibold text-gray-800 focus:outline-none focus:border-[#1b4d33]">
+              <option value="turmeric">Turmeric Fingers and Powder (Curcumin 3–5%)</option>
+              <option value="cumin">Cumin Seeds and Other Spices & Herbs</option>
+              <option value="air_dried">Air-Dried Vegetables (Beetroot, Garlic, Onion)</option>
+              <option value="agri_commodities">Agri Commodities & Yellow Maize (Corn)</option>
+              <option value="freeze_dried">Freeze-Dried Fruits (100% Natural)</option>
+            </select>
+          </div>
+
+          <!-- Variety / Form -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-gray-700 uppercase mb-2">2. Processing Variety / Option</label>
+            <select id="calc-variety" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm font-medium text-gray-800 focus:outline-none focus:border-[#1b4d33]">
+              <!-- Populated dynamically by JS -->
+            </select>
+          </div>
+
+          <!-- Quality Grade -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-gray-700 uppercase mb-2">3. Cultivation Standard</label>
+            <div class="grid grid-cols-2 gap-3">
+              <button type="button" data-grade="ipm" class="calc-grade-btn py-3 px-4 rounded-xl border border-[#1b4d33] bg-[#1b4d33] text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>IPM Low-Residue Grade</span>
+              </button>
+              <button type="button" data-grade="conventional" class="calc-grade-btn py-3 px-4 rounded-xl border border-gray-200 bg-white text-gray-700 text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-colors">
+                <i data-lucide="check" class="w-4 h-4"></i>
+                <span>Conventional Export Grade</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Packaging -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-gray-700 uppercase mb-2">4. Packaging Unit</label>
+            <div class="grid grid-cols-3 gap-3">
+              <button type="button" data-pack="25" class="calc-pack-btn py-2.5 px-3 rounded-xl border border-gray-200 bg-white text-gray-700 text-xs font-bold transition-colors">
+                25 kg PP Bags
+              </button>
+              <button type="button" data-pack="50" class="calc-pack-btn py-2.5 px-3 rounded-xl border border-[#1b4d33] bg-[#1b4d33] text-white text-xs font-bold transition-colors">
+                50 kg PP Bags
+              </button>
+              <button type="button" data-pack="1000" class="calc-pack-btn py-2.5 px-3 rounded-xl border border-gray-200 bg-white text-gray-700 text-xs font-bold transition-colors">
+                1 MT Bulk Bags
+              </button>
+            </div>
+          </div>
+
+          <!-- Volume Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs font-mono font-bold text-gray-700 uppercase">5. Consignment Volume</label>
+              <span id="calc-volume-display" class="font-mono text-sm font-bold text-[#1b4d33] bg-[#eef7f1] px-3 py-1 rounded-lg border border-[#c2e2cc]">25 Metric Tons</span>
+            </div>
+            <input id="calc-volume" type="range" min="5" max="300" step="5" value="25" class="w-full accent-[#1b4d33] bg-gray-200 h-2 rounded-lg cursor-pointer" />
+            <div class="flex justify-between text-[11px] font-mono text-gray-400 mt-1">
+              <span>5 MT (Trial)</span>
+              <span>50 MT</span>
+              <span>150 MT</span>
+              <span>300 MT+</span>
+            </div>
+          </div>
+
+          <!-- Destination Port -->
+          <div>
+            <label class="block text-xs font-mono font-bold text-gray-700 uppercase mb-2">6. Port of Discharge (Destination)</label>
+            <div class="relative">
+              <i data-lucide="anchor" class="w-4 h-4 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+              <input id="calc-port" type="text" value="Jebel Ali, UAE" placeholder="e.g. Rotterdam, Hamburg, Singapore, Jebel Ali" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl pl-11 pr-4 py-3 text-sm font-medium text-gray-800 focus:outline-none focus:border-[#1b4d33]" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Calculated Summary (Right 5 Cols) -->
+        <div class="lg:col-span-5 bg-[#f5f1e8] p-6 sm:p-8 rounded-2xl border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-gray-300 mb-6">
+              <div>
+                <span class="text-[10px] font-mono text-[#c98a2c] uppercase font-bold tracking-wider block">Estimated Requisition</span>
+                <h4 class="font-serif text-xl font-bold text-[#123321]">Consignment Summary</h4>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#1b4d33] shadow-sm">
+                <i data-lucide="boxes" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-xs font-mono mb-6">
+              <div>
+                <span class="text-gray-500 block text-[11px]">Selected Item:</span>
+                <span id="calc-out-title" class="text-[#123321] text-sm font-sans font-bold">Turmeric Fingers and Powder (IPM)</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 py-3 border-y border-gray-300">
+                <div>
+                  <span class="text-gray-500 block text-[10px]">Estimated Load:</span>
+                  <span id="calc-out-containers" class="text-[#1b4d33] font-bold text-sm block mt-0.5">~1.4 × 20' FCL</span>
+                </div>
+                <div>
+                  <span class="text-gray-500 block text-[10px]">Total Packaging:</span>
+                  <span id="calc-out-bags" class="text-[#123321] font-bold text-sm block mt-0.5">500 × 50 kg Bags</span>
+                </div>
+              </div>
+
+              <div>
+                <span class="text-gray-500 block text-[10px]">Moisture Parameter:</span>
+                <span id="calc-out-moisture" class="text-gray-800 font-semibold">Max 10% – 11%</span>
+              </div>
+
+              <div>
+                <span class="text-gray-500 block text-[10px] mb-1">Generated Summary:</span>
+                <p id="calc-out-summary" class="text-gray-700 font-sans text-xs bg-white p-3 rounded-lg border border-gray-200 leading-relaxed"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="space-y-3 pt-4 border-t border-gray-300">
+            <a id="calc-btn-whatsapp" href="#" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-[#25d366] hover:bg-[#1ebd5a] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Send Inquiry via WhatsApp</span>
+            </a>
+
+            <a id="calc-btn-email" href="#" class="w-full py-3.5 px-4 rounded-xl btn-farm text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Send Official Email Requisition</span>
+            </a>
+
+            <button id="calc-btn-copy" class="w-full py-2.5 px-4 rounded-xl bg-white border border-gray-300 text-gray-700 text-xs font-semibold flex items-center justify-center gap-2 hover:bg-gray-50">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Copy Consignment Details</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT US & FACTORY LOCATION
+       ========================================================================= -->
+  <section id="contact" class="bg-[#123321] text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Info (Left 5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="agri-pill bg-white/10 text-amber-400 border-white/20 mb-2">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Contact Information</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-serif text-white">
+            Let's Grow Together.
+          </h2>
+
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            Getting in touch is easy! Reach out directly to our export team for export proforma pricing, samples, or customized commodity specifications.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-gray-400 uppercase block">Registered Address</span>
+                <p class="text-sm font-semibold text-white">Mandna, Sillod, Chhatrapati Sambhajinagar</p>
+                <p class="text-xs text-gray-300">Maharashtra, India – 431112</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-gray-400 uppercase block">Call Us & WhatsApp</span>
+                <a href="tel:+917888189622" class="text-sm font-semibold text-white hover:text-amber-400 transition-colors block">+91 78881 89622</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-gray-400 uppercase block">Mail Us</span>
+                <a href="mailto:exports@iragrow.com" class="text-sm font-semibold text-white hover:text-amber-400 transition-colors block">exports@iragrow.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="globe" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-gray-400 uppercase block">Website</span>
+                <span class="text-sm font-semibold text-white">www.iragrow.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form (Right 7 Cols) -->
+        <div class="lg:col-span-7 bg-white text-gray-900 p-8 sm:p-10 rounded-3xl shadow-xl">
+          <h3 class="font-serif text-2xl font-bold text-[#123321] mb-2">Send Us a Message</h3>
+          <p class="text-xs text-gray-500 mb-6 font-medium">Get a free quote directly from our export sales desk</p>
+
+          <form onsubmit="event.preventDefault(); alert('Thank you for contacting IraGrow. Our export team will respond to your inquiry within 12 business hours.');" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Your Name</label>
+                <input type="text" required placeholder="Enter full name" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1b4d33]" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Email Address</label>
+                <input type="email" required placeholder="name@company.com" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1b4d33]" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Phone / WhatsApp</label>
+                <input type="tel" required placeholder="+Country code and number" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1b4d33]" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Target Product</label>
+                <input type="text" placeholder="e.g. Turmeric, Cumin, Maize" class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1b4d33]" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Message / Requirements</label>
+              <textarea rows="4" required placeholder="Please write your volume, destination port, and delivery schedule requirements..." class="w-full bg-[#fcfbf7] border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#1b4d33] resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="btn-farm w-full py-4 text-xs font-bold uppercase tracking-wider">
+              <span>Get A Free Quote</span>
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-[#0b1f14] text-white py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="font-serif text-2xl font-bold tracking-tight block">IraGrow</span>
+        <span class="font-mono text-[10px] text-amber-400 tracking-widest uppercase block mt-1">PURE • NATURAL • GLOBAL</span>
+        <p class="text-xs text-gray-400 mt-2">FROM FIELDS TO FRONTIERS. • LET'S GROW TOGETHER</p>
+      </div>
+
+      <div class="text-xs text-gray-400 text-center sm:text-right">
+        <p>Mandna, Sillod, Chhatrapati Sambhajinagar, Maharashtra, India – 431112</p>
+        <p class="text-amber-400 font-semibold mt-1">+91 7888189622 • exports@iragrow.com</p>
+        <p class="mt-2 text-gray-500 font-mono">Copyright © 2026 iragrow.com • Powered by iragrow.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       INTERACTIVE MODAL 1: PRODUCT SPECIFICATION VIEWER
+       ========================================================================= -->
+  <div id="product-modal" class="lightbox-modal">
+    <div class="lightbox-content p-6 sm:p-8">
+      <div class="flex items-center justify-between pb-4 border-b border-gray-200 mb-6">
+        <div>
+          <span id="modal-product-badge" class="agri-pill text-xs mb-1">Specification</span>
+          <h3 id="modal-product-title" class="font-serif text-2xl font-bold text-[#123321]">Product Title</h3>
+        </div>
+        <button id="modal-close-btn" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start mb-6">
+        <div class="md:col-span-5 rounded-xl overflow-hidden h-52 sm:h-64 border border-gray-200">
+          <img id="modal-product-img" src="" alt="Produce detail" class="w-full h-full object-cover" />
+        </div>
+        <div class="md:col-span-7">
+          <p id="modal-product-desc" class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-4"></p>
+          <div class="bg-[#fcfbf7] p-4 rounded-xl border border-gray-200">
+            <h5 class="text-xs font-mono font-bold uppercase text-[#1b4d33] mb-2">Technical & Laboratory Parameters:</h5>
+            <div id="modal-product-specs" class="space-y-1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-4 border-t border-gray-200">
+        <a id="modal-quote-btn" href="#calculator-section" class="btn-farm text-xs font-bold py-3 px-6">
+          <span>Configure Consignment in Estimator</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       INTERACTIVE MODAL 2: CERTIFICATION LIGHTBOX
+       ========================================================================= -->
+  <div id="cert-modal" class="lightbox-modal">
+    <div class="lightbox-content max-w-lg p-6 sm:p-8 text-center">
+      <button id="cert-close-btn" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="h-32 flex items-center justify-center mb-6">
+        <img id="cert-modal-img" src="" alt="Certification Badge" class="max-h-28 w-auto object-contain" />
+      </div>
+
+      <h3 id="cert-modal-title" class="font-serif text-2xl font-bold text-[#123321] mb-2">Certification Name</h3>
+      <p id="cert-modal-desc" class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6"></p>
+
+      <div class="p-3 bg-[#eef7f1] rounded-xl text-xs font-mono text-[#1b4d33] font-bold">
+        Verified & Statutory Registered • Government of India Standards
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       INTERACTIVE MODAL 3: OFFICIAL PRODUCT BROCHURE VIEWER
+       ========================================================================= -->
+  <div id="brochure-modal" class="lightbox-modal">
+    <div class="lightbox-content max-w-3xl p-4 sm:p-6">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-200 mb-4">
+        <div>
+          <span class="text-xs font-mono font-bold text-[#c98a2c] uppercase">Official Document</span>
+          <h3 class="font-serif text-xl font-bold text-[#123321]">IraGrow Official Product Brochure</h3>
+        </div>
+        <button id="brochure-close-btn" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="max-h-[75vh] overflow-y-auto rounded-xl border border-gray-200 bg-gray-50 flex justify-center p-2">
+        <img src="assets/brochure.jpg" alt="IraGrow Official Brochure" class="w-full h-auto object-contain rounded-lg shadow" />
+      </div>
+
+      <div class="flex items-center justify-between pt-4 mt-2">
+        <span class="text-xs text-gray-500 font-mono">Pure • Natural • Global</span>
+        <a href="assets/brochure.jpg" download="IraGrow-Brochure.jpg" class="btn-farm text-xs font-bold py-2.5 px-5">
+          <i data-lucide="download" class="w-4 h-4"></i> Download Brochure
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/canvas-hero.js"></script>
+  <script src="js/rfq-calculator.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
